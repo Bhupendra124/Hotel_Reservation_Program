@@ -2,9 +2,9 @@ package bhupendrawork;
 
 public class Hotel {
     public String hotelName;
-    public int weekdayRate;
+    public int weekdayRate;String asString = Integer.toString(weekdayRate);
     public int weekendRate;
-
+    //String asString = Integer.toString(Integer.parseInt(weekdayRate));
     public String getHotelName() {
         return hotelName;
     }
@@ -17,7 +17,7 @@ public class Hotel {
         return weekdayRate;
     }
 
-    public void setWeekdayRate(int weekdayRate) {
+    public void setWeekdayRate() {
         this.weekdayRate = weekdayRate;
     }
 
