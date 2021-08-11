@@ -18,7 +18,7 @@ public class HotelReservation {
             System.out.println("1. show hotel");
             System.out.println("2. view cheapest according to weekday");
             System.out.println("3. view cheapest according to weekend");
-            System.out.println("4. ");
+            System.out.println("4. sorting hotel according to rating  ");
             System.out.println("5. ");
             System.out.println("6. Exit");
             System.out.print("Enter Your choice: ");
@@ -41,7 +41,10 @@ public class HotelReservation {
                     main.findCheapest_According_Weekend();
                     break;
                 case 4:
-                    System.out.println();
+                    System.out.println("lowest rate hotel  ");
+                    main.displayMenu();
+                    main.sorting_Hotel_On_rating();
+                    break;
 
 
             }

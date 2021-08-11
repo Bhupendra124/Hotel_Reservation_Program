@@ -45,6 +45,7 @@ public class Main {
 
          throw null ;
        }
+        System.out.println("Best cheap hotel offer on this weekday ___________");
         System.out.println(hotelList.get(0));
 
     }
@@ -56,9 +57,18 @@ public class Main {
                 .sorted(Comparator.comparingInt(Hotel::getWeekendRate))
                 .collect(Collectors.toList());
         sortedList.forEach(System.out::println);
+        System.out.println("Weekend offer best cheapHotel_______");
         System.out.println(hotelList.get(0));
     }
+      public  void sorting_Hotel_On_rating(){
+    ArrayList<Hotel> sortedList = (ArrayList<Hotel>) hotelList.stream()
 
+            .sorted(Comparator.comparingInt(Hotel::getRating))
+            .collect(Collectors.toList());
+             sortedList.forEach(System.out::println);
+          System.out.println("Max Rating__________ ");
+             System.out.println(hotelList.get(0));
+}
 
 
 
