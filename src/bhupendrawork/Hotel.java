@@ -6,6 +6,13 @@ public class Hotel {
     public int weekendRate;
     public int rating;
 
+    public Hotel(String name, int weekdayRate, int weekendRate, int rating) {
+        this.hotelName = name;
+        this.weekdayRate = weekdayRate;
+        this.weekendRate = weekendRate;
+        this.rating=rating ;
+    }
+
 
     //String asString = Integer.toString(Integer.parseInt(weekdayRate));
     public String getHotelName() {
@@ -38,12 +45,7 @@ public class Hotel {
         this.rating=rating;
     }
 
-    public Hotel(String name, int weekdayRate, int weekendRate, int rating) {
-        this.hotelName = name;
-        this.weekdayRate = weekdayRate;
-        this.weekendRate = weekendRate;
-        this.rating=rating;
-    }
+
 
     @Override
     public String toString() {
@@ -55,4 +57,19 @@ public class Hotel {
                 '}';
     }
 
+    public void setTotalRate(int i) {
+        return;
+    }
+
+    public int getTotalRate() {
+        return this.getTotalRate();
+    }
+
+    public int getRewardedWeekdayRate() {
+        return this.getWeekdayRate();
+    }
+
+    public int getRewardedWeekendRate() {
+        return 0;
+    }
 }

@@ -5,9 +5,9 @@ import java.util.*;
 
 
 public class HotelReservation {
-
+    public static   ArrayList<Hotel> hotelList = new ArrayList<>();
     public static void main(String[] args) {
-        Main main = new Main();
+        Methods main = new Methods();
         HotelReservation hotelReservation = new HotelReservation();
 
 
@@ -19,7 +19,7 @@ public class HotelReservation {
             System.out.println("2. view cheapest according to weekday");
             System.out.println("3. view cheapest according to weekend");
             System.out.println("4. sorting hotel according to rating  ");
-            System.out.println("5. ");
+            System.out.println("5. cheapest rate on this dated ");
             System.out.println("6. Exit");
             System.out.print("Enter Your choice: ");
 
@@ -45,15 +45,49 @@ public class HotelReservation {
                     main.displayMenu();
                     main.sorting_Hotel_On_rating();
                     break;
+                case 5:
+
+
+                    System.out.println("\"11-09-2020\", \"12-09-2020\" ");
+                    try {
+                        main.editList();
+                        System.out.println(hotelList);
+                    }catch (Exception e){
+                        System.out.println("Invalid");
+                    }
+
+
+
+//                    if (!HotelList.contains(current)) {
+//                    return false;
+//                }
+//                     HotelList.remove(current);
+//                      HotelList.add(editedContact);
+//                    return true;
+//            }
+                    //day.diffDays("11-09-2020", "12-09-2020");
+                   // day.calcWeekend("11-01-2020","12-09-2020");
+                    System.out.println();
+                   case 6:
+                       System.exit(10);
 
 
             }
         }
 
 
-    }
+    }}
 
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
