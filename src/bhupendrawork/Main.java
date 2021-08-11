@@ -31,7 +31,7 @@ public class Main {
         }
     }
 
-    public void findCheapest() {
+    public void findCheapest_According_Weekday() {
         try {
            ArrayList<Hotel> sortedList = (ArrayList<Hotel>) hotelList.stream()
 
@@ -44,5 +44,14 @@ public class Main {
        }
         System.out.println(hotelList.get(0));
 
+    }
+
+    public  void  findCheapest_According_Weekend(){
+
+        ArrayList<Hotel> sortedList = (ArrayList<Hotel>) hotelList.stream()
+
+                .sorted(Comparator.comparingInt(Hotel::getWeekendRate))
+                .collect(Collectors.toList());
+        sortedList.forEach(System.out::println);
     }
 }
